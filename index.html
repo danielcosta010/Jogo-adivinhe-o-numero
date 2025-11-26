@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o Número | Jogo de Lógica</title>
+    <meta name="description" content="Jogo de adivinhação de números. Teste sua lógica e descubra o número secreto!">
+    <meta name="theme-color" content="#6366f1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-card">
+            <div class="toolbar">
+                <button class="toolbar-btn" id="stats-btn" title="Estatísticas">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="toolbar-btn" id="sound-toggle" title="Som">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="header">
+                <div class="icon-wrapper">
+                    <svg class="game-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <text x="12" y="16" text-anchor="middle" fill="currentColor" font-size="10" font-weight="bold">?</text>
+                    </svg>
+                </div>
+                <h1>Adivinhe o Número</h1>
+                <p class="subtitle">Estou pensando em um número entre <strong>1</strong> e <strong>100</strong></p>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-label">Tentativas</span>
+                    <span class="stat-value" id="tentativas-count">0</span>
+                    <span class="stat-max">/ 6</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Restantes</span>
+                    <span class="stat-value" id="restantes-count">6</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input type="number" min="1" max="100" placeholder="Digite um número" class="numero-input" id="input" autocomplete="off">
+                    <button class="btn-enviar" id="palpitar" aria-label="Enviar palpite">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="message-section">
+                <div class="message-box" id="mensagem-box">
+                    <span class="message-text" id="mensagem">Faça seu primeiro palpite!</span>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <span class="history-label">Palpites anteriores:</span>
+                <div class="palpites-list" id="palpites"></div>
+            </div>
+
+            <button class="btn-reiniciar" id="reiniciar">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 4V10H7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.51 15C4.15839 16.8404 5.38734 18.4202 7.01166 19.5014C8.63598 20.5826 10.5677 21.1066 12.5157 20.9945C14.4637 20.8823 16.3226 20.1402 17.8121 18.8798C19.3017 17.6193 20.3413 15.9088 20.7742 14.0064C21.2072 12.1041 21.0101 10.1135 20.2126 8.33111C19.4152 6.54871 18.0605 5.06723 16.3528 4.11151C14.6451 3.15578 12.6769 2.77678 10.7447 3.02778C8.81245 3.27877 7.02091 4.14609 5.64 5.51L1 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Novo Jogo
+            </button>
+        </div>
+
+        <footer class="footer">
+            <p>Desenvolvido por Daniel Costa</p>
+        </footer>
+    </div>
+
+    <!-- Modal de Estatísticas -->
+    <div class="modal-overlay" id="stats-modal">
+        <div class="modal">
+            <button class="modal-close" id="close-modal" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h2>📊 Suas Estatísticas</h2>
+            <div class="stats-grid">
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-played">0</span>
+                    <span class="stats-label">Jogos</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-win-rate">0%</span>
+                    <span class="stats-label">Vitórias</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-streak">0</span>
+                    <span class="stats-label">Sequência</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-number" id="stat-best">-</span>
+                    <span class="stats-label">Melhor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/game.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+</html>
