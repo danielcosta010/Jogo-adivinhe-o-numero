@@ -1,0 +1,115 @@
+# 🎮 Adivinhe o Número - Do Zero ao Herói
+
+Um jogo interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript Vanilla**, demonstrando padrões profissionais de desenvolvimento web.
+
+## 🚀 [Jogar Agora](https://danielcosta010.github.io/Jogo-adivinhe-o-numero/)
+
+---
+
+## 📸 Screenshot
+
+![Jogo Adivinhe o Número](https://via.placeholder.com/600x400?text=Jogo+Adivinhe+o+Número)
+
+---
+
+## ✨ Características
+
+- ✅ Interface responsiva (desktop, tablet, mobile)
+- ✅ Animações suaves e efeitos visuais
+- ✅ Confetti explosivo e fogos de artifício
+- ✅ Sistema de sons (com mute)
+- ✅ Estatísticas persistentes (localStorage)
+- ✅ Código modular profissional (IIFE pattern)
+- ✅ Totalmente acessível
+- ✅ Suporte a teclado (Enter)
+
+---
+
+## 🎯 Como Jogar
+
+1. Digite um número entre 1 e 100
+2. Pressione **Enter** ou clique no botão →
+3. Receba dicas (maior/menor)
+4. Acerte em até 6 tentativas
+5. Veja suas estatísticas
+
+---
+
+## 💻 Tecnologias
+
+- **HTML5** - Estrutura semântica
+- **CSS3** - Flexbox, Grid, Animações
+- **JavaScript ES6+** - IIFE, Modular, Eventos
+
+---
+
+## 📁 Estrutura
+
+```
+├── index.html           # Estrutura HTML
+├── style.css            # Estilos CSS
+├── js/
+│   ├── game.js         # Lógica do jogo
+│   ├── ui.js           # Interface
+│   ├── effects.js      # Efeitos e sons
+│   └── app.js          # Orquestração
+└── sounds/             # Áudio do jogo
+```
+
+---
+
+## 🚀 Começar Localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/danielcosta010/Jogo-adivinhe-o-numero.git
+
+# Entre na pasta
+cd Jogo-adivinhe-o-numero
+
+# Abra no navegador
+# Opção 1: Clique em index.html
+# Opção 2: Use Live Server (VS Code)
+# Opção 3: python -m http.server 8000
+```
+
+---
+
+## 🎓 Documentação
+
+- **ROTEIRO_VIDEOS.md** - 59 vídeos detalhados com código
+- **roteiroDeCurso.md** - Estrutura completa do curso (6 módulos, 53-65 horas)
+
+---
+
+## 📊 Estatísticas
+
+| Item | Detalhe |
+|------|---------|
+| Linhas de Código | 500+ |
+| Módulos JS | 4 (Game, UI, Effects, App) |
+| Vídeos | 59 |
+| Duração | ~10 horas |
+| Responsividade | 100% |
+
+---
+
+## 🤝 Contribuições
+
+Fork → Branch → Commit → Push → Pull Request
+
+---
+
+## 📄 Licença
+
+MIT License
+
+---
+
+## 👨‍💻 Autor
+
+**Daniel Costa** - [GitHub](https://github.com/danielcosta010)
+
+---
+
+**Criado com ❤️ para ensinar desenvolvimento web profissional**
