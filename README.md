@@ -1,8 +1,8 @@
-# 🎮 Adivinhe o Número - Do Zero ao Herói
+# 🎮 Adivinhe o Número
 
 Um jogo interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript Vanilla**, demonstrando padrões profissionais de desenvolvimento web.
 
-## 🚀 [Jogar Agora](https://danielcosta010.github.io/Jogo-adivinhe-o-numero/)
+## [🚀 Jogar Agora](https://danielcosta010.github.io/Jogo-adivinhe-o-numero/){:target="_blank"}
 
 ---
 
@@ -77,7 +77,7 @@ cd Jogo-adivinhe-o-numero
 
 ## 👨‍💻 Autor
 
-**Daniel Costa** - [GitHub](https://github.com/danielcosta010)
+**Daniel Costa** - <a href="https://github.com/danielcosta010" target="_blank">GitHub</a>
 
 ---
 
