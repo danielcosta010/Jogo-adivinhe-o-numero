@@ -2,7 +2,7 @@
 
 Um jogo interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript Vanilla**, demonstrando padrões profissionais de desenvolvimento web.
 
-## [🚀 Jogar Agora](https://danielcosta010.github.io/Jogo-adivinhe-o-numero/){:target="_blank"}
+## 🚀 <a href="https://danielcosta010.github.io/Jogo-adivinhe-o-numero/" target="_blank">Jogar Agora</a>
 
 ---
 
