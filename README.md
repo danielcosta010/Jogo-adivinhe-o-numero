@@ -75,41 +75,10 @@ cd Jogo-adivinhe-o-numero
 
 ---
 
-## 🎓 Documentação
-
-- **ROTEIRO_VIDEOS.md** - 59 vídeos detalhados com código
-- **roteiroDeCurso.md** - Estrutura completa do curso (6 módulos, 53-65 horas)
-
----
-
-## 📊 Estatísticas
-
-| Item | Detalhe |
-|------|---------|
-| Linhas de Código | 500+ |
-| Módulos JS | 4 (Game, UI, Effects, App) |
-| Vídeos | 59 |
-| Duração | ~10 horas |
-| Responsividade | 100% |
-
----
-
-## 🤝 Contribuições
-
-Fork → Branch → Commit → Push → Pull Request
-
----
-
-## 📄 Licença
-
-MIT License
-
----
-
 ## 👨‍💻 Autor
 
 **Daniel Costa** - [GitHub](https://github.com/danielcosta010)
 
 ---
 
-**Criado com ❤️ para ensinar desenvolvimento web profissional**
+**Criado para ensinar desenvolvimento web profissional**
