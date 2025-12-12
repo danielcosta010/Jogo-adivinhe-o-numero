@@ -8,7 +8,7 @@ Um jogo interativo desenvolvido com **HTML5**, **CSS3** e **JavaScript Vanilla**
 
 ## 📸 Screenshot
 
-![Jogo Adivinhe o Número]('./imagens/jogo-screenShot.png)
+![Jogo Adivinhe o Número]('./imagens/jogo-screenShot.png')
 
 ---
 
